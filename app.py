@@ -21,7 +21,7 @@ import os
 import yaml
 import simplejson as json
 import requests
-from urllib.parse import quote
+from urllib import quote
 from flask import Response, make_response
 import mwoauth
 import mwoauth.flask
