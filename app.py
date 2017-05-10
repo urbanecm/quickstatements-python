@@ -33,5 +33,27 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-        username = flask.session.get('username', None)
+	username = flask.session.get('username', None)
 	return flask.render_template('index.html', username=username)
+
+@app.route('/process', methods=['POST'])
+def process():
+	cmdsorrig = request.form['cmds']
+	cmds = cmdsorig.split('\n')
+	cmds.pop()
+	return ""
+
+@app.route('/login')
+def login():
+	return ""
+
+@app.route('/logout')
+def logout():
+	return ""
+
+@app.route('/oauth-callback')
+def callback():
+	return ""
+
+if __name__ == "__main__":
+	app.run()
